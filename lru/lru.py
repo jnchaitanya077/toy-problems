@@ -7,18 +7,10 @@ class lru:
 
         pass
 
-    def put(self, key, data):
+    def put(self, key):
 
         pass
 
     def get_cache(self):
 
         pass
-
-
-def main():
-    print("Hello World")
-
-
-if __name__ == "__main__":
-    main()
