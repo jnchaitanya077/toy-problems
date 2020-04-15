@@ -8,15 +8,15 @@ class lruTEST:
 
     def testcases(self):
         a = lru(3)
-        a.put("google")
-        assert a.get("google") == "www.google.com", "testcase 1 failed"
+        a.put("getbootstrap")
+        assert a.get("getbootstrap") == "104.22.59.100", "testcase 1 failed"
         print("testcase 1 passed")
-        a.put("facebook")
-        assert a.get("facebook") == "www.facebook.com", "testcase 2 failed"
+        a.put("github")
+        assert a.get("github") == "13.234.176.102", "testcase 2 failed"
         print("testcase 2 passed")
         a.put("gmail")
         a.put("youtube")
-        assert a.get("google") == None, "testcase 3 failed"
+        assert a.get("getbootstrap") == None, "testcase 3 failed"
         print("testcase 3 passed")
         print("All Testcases passed!!")
         lst = a.get_cache()

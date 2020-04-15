@@ -1,3 +1,6 @@
+import socket
+
+
 class lru:
 
     def __init__(self, size):
@@ -17,16 +20,19 @@ class lru:
             if key in self.lru:
                 self.lru.remove(key)
                 self.lru.append(key)
-                self.lruCache[key] = "www."+str(key)+".com"
+                hostname = "www."+str(key)+".com"
+                self.lruCache[key] = socket.gethostbyname(hostname)
             else:
                 self.lru.append(key)
-                self.lruCache[key] = "www."+str(key)+".com"
+                hostname = "www."+str(key)+".com"
+                self.lruCache[key] = socket.gethostbyname(hostname)
         else:
 
             var = self.lru.pop(0)
             self.lru.append(key)
             del self.lruCache[var]
-            self.lruCache[key] = "www."+str(key)+".com"
+            hostname = "www."+str(key)+".com"
+            self.lruCache[key] = socket.gethostbyname(hostname)
 
     def get_cache(self):
         ls = []
